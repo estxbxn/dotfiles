@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-scale '/home/esteban/Images/dark-cat-rosewater.png' 
+feh --no-fehbg --bg-scale '~/dotfiles/wallpapers/dark-cat-rosewater.png'
