@@ -2,6 +2,8 @@
 
 My personal dotfiles for EndeavourOS with i3wm, configured for a clean and minimal development environment.
 
+![Showcase](showcase.png)
+
 ## Setup
 
 - **OS**: EndeavourOS (Arch-based)
