@@ -36,3 +36,36 @@ cp .Xresources ~/
 chsh -s $(which zsh)
 
 echo "Done! Please relogin to apply all changes."
+
+# Install additional packages
+sudo pacman -S --needed xorg-xev xorg-xrandr
+
+# Install cursor theme
+yay -S --needed bibata-cursor-theme
+
+# Copy additional configs
+cp -r .icons ~/
+cp .fehbg ~/
+chmod +x ~/.fehbg
+cp -r flameshot ~/.config/
+
+# Set wallpaper
+~/.fehbg
+
+# Configure cursor
+mkdir -p ~/.icons/default
+cat > ~/.icons/default/index.theme << 'CURSOR'
+[Icon Theme]
+Name=Default
+Comment=Default Cursor Theme
+Inherits=Bibata-Modern-Classic
+CURSOR
+
+# Configure git
+echo "Configuring git..."
+read -p "Enter your git email: " git_email
+read -p "Enter your git username: " git_username
+git config --global user.email "$git_email"
+git config --global user.name "$git_username"
+
+echo "All done! Relogin to apply all changes."
